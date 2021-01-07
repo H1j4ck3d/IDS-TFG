@@ -16,14 +16,19 @@ Instrucciones para la instalación de la maquina Ubuntu con Zeek:
 3.	Instalación del plugin Zeek-Kafka:
 
 	a.Primero, instalar librdkafka-1.4.2
+	
 		>> Ver https://github.com/apache/metron-bro-plugin-kafka
+		
 	b.Segundo, instalar el plugin (versión octubre 2020)
+	
 		>> git clone https://github.com/apache/metron-bro-plugin-kafka
 		>> git reset <SHA1 versión octubre 2020>
 		>> configure -- with-librdkafka=$librdkafka_root
 		>> make
 		>> sudo make install
+		
 	c.Comprobar si funciona usando: 
+	
 		>> zeek -N Apache::Kafka
 
 4.	Instalación de Kafka: (necesario tener instalado Java 8+)
